@@ -1,0 +1,23 @@
+{
+  "name": "LAB1SDMIDDLWARE",
+  "version": "1.0.0",
+  "description": "Middleware Server for LAB1 SD",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamLProgrammer/LAB1SDMIDDLWARE.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SamLProgrammer/LAB1SDMIDDLWARE/issues"
+  },
+  "homepage": "https://github.com/SamLProgrammer/LAB1SDMIDDLWARE#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
