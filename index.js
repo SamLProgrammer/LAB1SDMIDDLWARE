@@ -11,5 +11,10 @@ app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
 
- shell.exec('/home/debian2/pinger.sh')
+function yourFunction(){
+  shell.exec('/home/debian2/pinger.sh')
+  setTimeout(yourFunction, 2000);
+}
+
+yourFunction();
 
