@@ -3,8 +3,12 @@ const app = express()
 const port = 4000
 const shell = require('shelljs')
 
+app.set('views', __dirname + '/views')
+app.set('view engine', 'ejs')
+app.use(express.static('./views'));
+
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.render('index')
 })
 
 app.listen(port, () => {
