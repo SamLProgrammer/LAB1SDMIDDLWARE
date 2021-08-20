@@ -11,11 +11,12 @@ function requestUpdate(button1, button2) {
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
             const resp = JSON.parse(xhr.response);
-            alert(resp[0].server + ' ' + resp[0].status + resp[1].server + ' ' + resp[1].status);
             if(resp[0].status != 200) {
+                alert(button1.getAttribute('id'))
                 button1.style.backgroundColor = 'red'
             }
             if(resp[1].status != 200) {
+                alert(button2.getAttribute('id'))
                 button2.style.backgroundColor = 'red'
             }
         }
