@@ -11,7 +11,7 @@ function requestUpdate(button1, button2) {
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
             const resp = JSON.parse(xhr.response);
-            alert(resp);
+            alert(resp.server + ' ' + resp.status);
         }
     }
     xhr.send(null);
