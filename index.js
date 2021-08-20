@@ -3,6 +3,7 @@ const app = express()
 const port = 4000
 const shell = require('shelljs')
 let server1State = 0;
+let server2State = 0;
 
 app.set('views', __dirname + '/views')
 app.set('view engine', 'ejs')
@@ -14,7 +15,7 @@ app.get('/', (req, res) => {
 
 app.get('/refresh', (req, res) => {
   console.log(JSON.stringify({ server: 'server1', status: server1State}))
-  res.send({ server: 'server1', status: server1State})
+  res.send([{ server: 'server1', status: server1State}, {server: 'server2', status: server2State}])
 })
 
 app.listen(port, () => {
@@ -26,6 +27,8 @@ function yourFunction(){
   let fs  = require("fs");
   let array = fs.readFileSync('/home/debian2/last_debian0_ping.txt').toString().split('\n');
   server1State = array[0].split(' ')[0];
+  let array = fs.readFileSync('/home/debian2/last_debian1_ping.txt').toString().split('\n');
+  server2State = array[0].split(' ')[0];
   setTimeout(yourFunction, 2000);
 }
 
