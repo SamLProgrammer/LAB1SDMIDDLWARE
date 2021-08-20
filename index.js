@@ -13,8 +13,8 @@ app.get('/', (req, res) => {
 })
 
 app.get('/refresh', (req, res) => {
-  console.log(JSON.stringify({ server: 'server1', status = server1State}))
-  res.send({ server: 'server1', status = server1State})
+  console.log(JSON.stringify({ server: 'server1', status: server1State}))
+  res.send({ server: 'server1', status: server1State})
 })
 
 app.listen(port, () => {
