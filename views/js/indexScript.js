@@ -12,6 +12,12 @@ function requestUpdate(button1, button2) {
         if (xhr.readyState == 4 && xhr.status == 200) {
             const resp = JSON.parse(xhr.response);
             alert(resp[0].server + ' ' + resp[0].status + resp[1].server + ' ' + resp[1].status);
+            if(resp[0].status != 200) {
+                button1.style.backgroundColor = 'red'
+            }
+            if(resp[1].status != 200) {
+                button2.style.backgroundColor = 'red'
+            }
         }
     }
     xhr.send(null);
