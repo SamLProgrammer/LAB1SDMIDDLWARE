@@ -14,10 +14,14 @@ function requestUpdate(button1, button2) {
             if(resp[0].status != 200) {
                 alert(button1.getAttribute('id'))
                 button1.style.backgroundColor = 'red'
+            } else {
+                button1.style.backgroundColor = 'green'
             }
             if(resp[1].status != 200) {
                 alert(button2.getAttribute('id'))
                 button2.style.backgroundColor = 'red'
+            } else {
+                button2.style.backgroundColor = 'green'
             }
         }
     }
